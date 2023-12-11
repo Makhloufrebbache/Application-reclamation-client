@@ -1,0 +1,3 @@
+Auteur;Date_rec;Code_Clt;Categorie_Clt;Nom_Clt;Wilaya;Site_fab;Date_fab;DLC;Horaire_fab;Lot;n_ligne;Code_produit;Nb_Brique;Nb_Fardeau;Categorie_Defaut;Nom_Cons;Tel_Cons;Adresse_Cons;Email_Conso;Observation;Defaut
+"Djebar   MERABET";2018-05-11;CLT-000342;GROS;"BOUZIDI ABDELKRIM";17;BEJAIA;2018-05-18;2018-05-31;04:12:00;G51;"TWIST ORANGE FRAISE BANANE 200";12;1;"Défauts constatés par le consommateur ";;;;;"Semache amar ma aac ma zemmar";"Produit léger"
+"Djebar   MERABET";2018-05-11;CLT-000368;CONSO;"SARL Regional Distribution";12;BEJAIA;0001-01-01;0001-01-01;00:00:00;G45;"BOISSON COCKTAIL DE FRUITS 1L";2;3;"Défaut briques";"Semmache Ammar";0560232524;Takamra;amars@gmail.com;"Di lxater n Makhlouf u xentac ig tnaken a tass ass agi";"Brique sans date"

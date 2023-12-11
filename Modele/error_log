@@ -1,0 +1,8 @@
+[15-Apr-2018 20:34:42 Europe/Berlin] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user 'tchinlai_SVC'@'localhost' to database 'tchinlait_reclamation'' in /home/tchinlai/reclamation.tchinlait.com/Modele/distributeurw.php:3
+Stack trace:
+#0 /home/tchinlai/reclamation.tchinlait.com/Modele/distributeurw.php(3): PDO->__construct('mysql:host=loca...', 'tchinlai_SVC', 'candia@2017')
+#1 {main}
+  thrown in /home/tchinlai/reclamation.tchinlait.com/Modele/distributeurw.php on line 3
+[30-Sep-2018 22:19:03 Europe/Berlin] PHP Warning:  Unknown: open_basedir restriction in effect. File(/home/tchinlai/reclamation.tchinlait.com/Modele/distributeurw.php) is not within the allowed path(s): (/var/www:/home/www:/tmp:/usr/share:/usr/lib:/etc/phpMyAdmin/) in Unknown on line 0
+[30-Sep-2018 22:19:03 Europe/Berlin] PHP Warning:  Unknown: failed to open stream: Operation not permitted in Unknown on line 0
+[30-Sep-2018 22:19:03 Europe/Berlin] PHP Fatal error:  Unknown: Failed opening required '/home/tchinlai/reclamation.tchinlait.com/Modele/distributeurw.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in Unknown on line 0
