@@ -55,7 +55,8 @@ class user extends Modele{
 	public function addUser($USER_NOM, $USER_PRENOM, $USER_LOGIN, $USER_MDP, $USER_TYPE){
       $sql = "INSERT INTO USER (USER_NOM, USER_PRENOM, USER_LOGIN, USER_MDP, USER_TYPE, USER_DATE) values(?, ?, ?, ?, ?, ?)";
 	  $date = date("Y-m-d");
-	  $USER_MDP=$USER_MDP;
+	  $USER_MDP=sha1($USER_MDP);
+	  ;
       $this->executerRequete($sql, array($USER_NOM, $USER_PRENOM, $USER_LOGIN, $USER_MDP, $USER_TYPE, $date));
 	}
 	//Activer un utilisateur
@@ -77,7 +78,7 @@ class user extends Modele{
       $sql = "update USER
 	          set    USER_NOM=?, USER_PRENOM=?, USER_LOGIN=?, USER_MDP=?, USER_TYPE=?
 			  where  USER_ID=? ";
-	  $USER_MDP=$USER_MDP;
+	  $USER_MDP=sha1($USER_MDP);
       $this->executerRequete($sql, array($USER_NOM, $USER_PRENOM, $USER_LOGIN, $USER_MDP, $USER_TYPE, $USER_ID));
 	}
 	//Mettre à jour le mot de passe.	
@@ -85,6 +86,7 @@ class user extends Modele{
       $sql = "update USER
 	          set    USER_MDP=?, pwupdated=?
 			  where  USER_ID=? ";
+			  $USER_MDP=sha1($USER_MDP);
       $this->executerRequete($sql, array($USER_MDP, "Y", $USER_ID));
 		}
 	//Supprimer un utilisateur		
