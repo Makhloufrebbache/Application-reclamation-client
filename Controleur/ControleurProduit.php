@@ -9,7 +9,7 @@ class ControleurProduit extends Controleur {
   private $produit;
   public function __construct() {
 	$this->user           = new user();
-  $this->produit           = new produits();
+  $this->produit          = new produits();
   }
 
   public function index() {
@@ -18,8 +18,8 @@ class ControleurProduit extends Controleur {
 		$user  = array();
 	  if($this->requete->getSession()->existAttribut("login")){ //
 	    $IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
-	    $user      = $this->user->getUsers($IdUser);
-	    $login      = $this->requete->getSession()->getAttribut("login");
+	    $user     = $this->user->getUsers($IdUser);
+	    $login    = $this->requete->getSession()->getAttribut("login");
       }else{
 		  $this->rediriger("index.php");		
       }

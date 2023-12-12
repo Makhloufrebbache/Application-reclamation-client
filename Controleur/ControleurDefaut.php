@@ -18,8 +18,8 @@ class ControleurDefaut extends Controleur {
 		$user  = array();
 	  if($this->requete->getSession()->existAttribut("login")){ 
 	    $IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
-	    $user      = $this->user->getUsers($IdUser);
-	    $login      = $this->requete->getSession()->getAttribut("login");
+	    $user     = $this->user->getUsers($IdUser);
+	    $login    = $this->requete->getSession()->getAttribut("login");
       }else{
 		$this->rediriger("index.php");		
       }
@@ -31,7 +31,7 @@ class ControleurDefaut extends Controleur {
        
         $Defaut             = $this->requete->getParametre("Defaut");
 	   if($this->requete->existeParametre("Code_Categorie"))
-	    $Code_Categorie       = $this->requete->getParametre("Code_Categorie");
+	    $Code_Categorie     = $this->requete->getParametre("Code_Categorie");
 	   
 	// Insersion effective de la ligne
 	   $this->defaut ->addDefaut($Defaut, $Code_Categorie);

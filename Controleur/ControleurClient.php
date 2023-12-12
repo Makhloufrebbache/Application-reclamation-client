@@ -39,7 +39,7 @@ class ControleurClient extends Controleur {
 		 
 		$Code             = "";
 		$Designation      = "";
-		$msg                = "";
+		$msg              = "";
 		if($this->requete->existeParametre("Code")){ //Recupération de Forms Data
        $Code       = $this->requete->getParametre("Code");
 	   if($this->requete->existeParametre("Designation"))

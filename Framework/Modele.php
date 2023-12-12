@@ -12,8 +12,7 @@ require_once 'Configuration.php';
  */
 abstract class Modele {
 
-    /** Objet PDO d'accès à la BD 
-        Statique donc partagé par toutes les instances des classes dérivées */
+    /** Objet PDO d'accès à la BD Statique donc partagé par toutes les instances des classes dérivées */
     private static $bdd;
 
     /**

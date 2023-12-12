@@ -21,15 +21,15 @@ class ControleurCategorieclient extends Controleur {
 		$user  = array();
 	  if($this->requete->getSession()->existAttribut("login")){ //
 	    $IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
-	    $user      = $this->user->getUsers($IdUser);
-	    $login      = $this->requete->getSession()->getAttribut("login");
+	    $user     = $this->user->getUsers($IdUser);
+	    $login    = $this->requete->getSession()->getAttribut("login");
         //var_dump($user);
         	}else{//Si l'utilisateur n'est pas connecter il sera vers la page d'acceuil
 		$this->rediriger("index.php");}
 		//Ajout d'une catégorie client
 		$Code             = "";
 		$Designation      = "";
-		$msg                = "";
+		$msg              = "";
 		if($this->requete->existeParametre("Code")){ //Recupération de Forms Data
        $Code       = $this->requete->getParametre("Code");
 	   if($this->requete->existeParametre("Designation"))

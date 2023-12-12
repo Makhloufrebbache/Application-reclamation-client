@@ -47,15 +47,15 @@ class ControleurReclamations extends Controleur {
 		$nb_catclient     = $catclient->rowCount();
 		$catclient        = $catclient->fetchAll();
 		$wilayas          = $this->wilayas->getWilayas();
-		$nb_wilayas   = $wilayas->rowCount();
-		$wilayas        = $wilayas->fetchAll();
-	  $sitesfab  = $this->sitesfab->getSitesfab();
-		$nb_sitesfab     = $sitesfab->rowCount();
-		$sitesfab        = $sitesfab->fetchAll();
-	  $produits  = $this->produits->getProduits();
-		$produits        = $produits->fetchAll();
-	  $catdefauts  = $this->catdefauts->getCatdefauts();
-		$catdefauts        = $catdefauts->fetchAll();
+		$nb_wilayas       = $wilayas->rowCount();
+		$wilayas          = $wilayas->fetchAll();
+	  $sitesfab         = $this->sitesfab->getSitesfab();
+		$nb_sitesfab      = $sitesfab->rowCount();
+		$sitesfab         = $sitesfab->fetchAll();
+	  $produits         = $this->produits->getProduits();
+		$produits         = $produits->fetchAll();
+	  $catdefauts       = $this->catdefauts->getCatdefauts();
+		$catdefauts       = $catdefauts->fetchAll();
 
 		//Ajout d'une Réclamation
 		$login              = "";

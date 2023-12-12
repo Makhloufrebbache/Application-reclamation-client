@@ -20,8 +20,8 @@ class ControleurCategoriedefaut extends Controleur {
 		$user  = array();
 	  if($this->requete->getSession()->existAttribut("login")){ 
 	    $IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
-	    $user      = $this->user->getUsers($IdUser);
-	    $login      = $this->requete->getSession()->getAttribut("login");
+	    $user     = $this->user->getUsers($IdUser);
+	    $login    = $this->requete->getSession()->getAttribut("login");
         //var_dump($user);
 		}else{//Si l'utilisateur n'est pas connecter il sera vers la page d'acceuil
 		$this->rediriger("index.php");		
@@ -31,7 +31,7 @@ class ControleurCategoriedefaut extends Controleur {
 		//Ajout d'une catégorie défaut
 		$Code             = "";
 		$Designation      = "";
-		$msg                = "";
+		$msg              = "";
 		if($this->requete->existeParametre("Designation")){ //Recupération de Forms Data
        
        $Designation       = $this->requete->getParametre("Designation");

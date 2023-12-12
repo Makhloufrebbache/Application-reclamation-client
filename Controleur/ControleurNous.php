@@ -19,7 +19,7 @@ class ControleurNous extends Controleur {
 	  if($this->requete->getSession()->existAttribut("login")){ 
 	  $IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
 	  $user     = $this->user->getUsers($IdUser);
-	  $login     = $this->requete->getSession()->getAttribut("login");
+	  $login    = $this->requete->getSession()->getAttribut("login");
   
     }
   //Verifier s'il s'agit de la premiere connexion 

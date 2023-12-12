@@ -25,8 +25,8 @@ class ControleurListereclamations extends Controleur {
 	$user  = array();
 	if($this->requete->getSession()->existAttribut("login")){ //
 	$IdUser   =  $this->requete->getSession()->getAttribut("IdUser");
-	$user      = $this->user->getUsers($IdUser);
-	$login      = $this->requete->getSession()->getAttribut("login");
+	$user     = $this->user->getUsers($IdUser);
+	$login    = $this->requete->getSession()->getAttribut("login");
  }else{//Si l'utilisateur n'est pas connecter il sera vers la page d'acceuil
 	$this->rediriger("index.php");		
  }
@@ -34,7 +34,7 @@ class ControleurListereclamations extends Controleur {
  if ($user['USER_TYPE']=="AnimVente")
  $reclamations   = $this->reclamations->getReclamations('AuteurID =?',  $IdUser);//Récuperer les reclamations pour chaque animateur de vente
  else
-		$reclamations   = $this->reclamations->getReclamations(); //Récuperer ttes les reclamations 
+		$reclamations            = $this->reclamations->getReclamations(); //Récuperer ttes les reclamations 
 		    $nb_reclamations     = $reclamations->rowCount();
 			$reclamations        = $reclamations->fetchAll();
 			
@@ -50,15 +50,15 @@ class ControleurListereclamations extends Controleur {
 		    $nb_sitsFab          = $sitsFab->rowCount();
 			$sitsFab             = $sitsFab->fetchAll();
 			
-		$catsDef                = $this->catDefaut->getCatdefauts ();
+		$catsDef                 = $this->catDefaut->getCatdefauts ();
 		    $nb_catsDef          = $catsDef->rowCount();
 			$catsDef             = $catsDef->fetchAll();
 		
-		$defauts               = $this->Defaut->getDefauts ();
-		    $nb_defauts        = $defauts->rowCount();
+		$defauts                 = $this->Defaut->getDefauts ();
+		    $nb_defauts          = $defauts->rowCount();
 			$defauts             = $defauts->fetchAll();
 		
-		$dateduj            = date("Y-m-d", time());
+		$dateduj                 = date("Y-m-d", time());
 			
 		
 	//Filtrer selon Wilaya
@@ -72,7 +72,7 @@ class ControleurListereclamations extends Controleur {
 	//Filtrer par date
 	if($this->requete->existeParametre("Date_debut") && $this->requete->existeParametre("Date_fin")){
        $Date_debut        = $this->requete->getParametre("Date_debut");
-       $Date_fin        = $this->requete->getParametre("Date_fin");
+       $Date_fin          = $this->requete->getParametre("Date_fin");
 	   
     if ($user['USER_TYPE']=="AnimVente")
     $reclamations   = $this->reclamations->getReclamations('AuteurID =?',  $IdUser, $Date_debut, $Date_fin);//Récuperer les reclamations pour chaque animateur de vente

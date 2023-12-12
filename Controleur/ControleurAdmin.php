@@ -34,7 +34,7 @@ class ControleurAdmin extends ControleurSecurise{
 		
 	//Renvoi la liste des users 	
 	public function users(){
-        $login          = $this->requete->getSession()->getAttribut("login");
+        $login               = $this->requete->getSession()->getAttribut("login");
 		$users               = $this->users->getAllusers();
 		$nb_users            = $users->rowCount();
 		$connected_users     = $this->users->getConnectedusers();
@@ -54,22 +54,22 @@ class ControleurAdmin extends ControleurSecurise{
 		
 	if($this->requete->existeParametre("id")){
 	  $USER_ID = intval($this->requete->getParametre("id"));
-	  $user    = $users = $this->users->getUserAdmin($USER_ID);
+	  $users = $this->users->getUserAdmin($USER_ID);
 	}
 		
 	if($this->requete->existeParametre("USER_NOM")){
 	   if($this->requete->existeParametre("idHidden"))
-	   $USER_ID          = $this->requete->getParametre("idHidden");
+	   $USER_ID         = $this->requete->getParametre("idHidden");
 	   
-       $USER_NOM    = $this->requete->getParametre("USER_NOM");
+       $USER_NOM        = $this->requete->getParametre("USER_NOM");
 	   if($this->requete->existeParametre("USER_PRENOM"))
-       $USER_PRENOM       = $this->requete->getParametre("USER_PRENOM");
+       $USER_PRENOM     = $this->requete->getParametre("USER_PRENOM");
 	  if($this->requete->existeParametre("USER_LOGIN"))
-       $USER_LOGIN        = $this->requete->getParametre("USER_LOGIN");
+       $USER_LOGIN      = $this->requete->getParametre("USER_LOGIN");
 	  if($this->requete->existeParametre("USER_MDP"))
        $USER_MDP        = $this->requete->getParametre("USER_MDP");
 	  if($this->requete->existeParametre("USER_TYPE"))
-       $USER_TYPE        = $this->requete->getParametre("USER_TYPE");
+       $USER_TYPE       = $this->requete->getParametre("USER_TYPE");
    
 
 	   
